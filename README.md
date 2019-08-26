@@ -202,7 +202,7 @@ In this exercise, you will will build upon the existing single destination Kines
     ```
 
 5. Once you have copied and pasted the SQL into the query window, select **'Save and run SQL'**;
-6. To begin analyzing records navigate back to the Kinesis Data Generator and change the Stream/delivery stream selection to the **'real-time-analysis-AnomalyStream'** created by cloudformation and click **'Send Data'**;
+6. To begin analyzing records navigate back to the Kinesis Data Generator and change the Stream/delivery stream selection to the **'real-time-analysis-KinesisFirehose'** created by cloudformation and click **'Send Data'**;
 7. Navigate back to Amazon Kinesis dashboard and select the [real-time-analysis-AnomalyStream](https://us-west-2.console.aws.amazon.com/kinesis/home?region=us-west-2#/streams/details?streamName=real-time-analysis-AnomalyStream)
 8. Click on **'Go to SQL results'**;
 9. You should now see records on the stream.
