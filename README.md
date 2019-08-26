@@ -240,9 +240,15 @@ Once the anomaly scores have normalized, temporarily stop the kinesis data gener
 
 ### _Alerting_
 
-As the 'real-time-workshop-FindAnomaliesApplication' processes records on the stream using the random_cut_forest algorithm, appended records are published to the ANOMALY_SCORE_SQL_STREAM with their anomaly_score. This stream is configured as the execution trigger for 'real-time-workshop-SendNotification' lambda function which will output to an SNS message any record with an anomaly_score of 2.5 or higher.
+As the 'real-time-workshop-FindAnomaliesApplication' processes records on the stream using the random_cut_forest algorithm, appended records are published to the ANOMALY_SCORE_SQL_STREAM with their anomaly_score. This stream is configured as the execution trigger for 'real-time-workshop-SendNotification' lambda function which will output to an SNS message any record with an anomaly_score of 2.5 or higher.  
 
- Lambda Function Code:
+If you would like to experiment with the Anomaly_Threshold you can modify the ANOMALY_THRESHOLD = 2.5 value inline via the lambda console. By modifying the station weights in the Kinesis Data Generator, you can experiment with different anomaly and alerting thresholds.
+
+1. Go to the **'Lambda'** console;
+2. Click into the **'real-time-analysis-SendNotification'** function;
+3. Alter the field **'ANOMALY_THRESHOLD'**.
+
+Lambda Function Code:
 
 ```python
 from __future__ import print_function
